@@ -33,6 +33,9 @@ client.on(Events.MessageCreate, async message => {
     if (message.author.bot) return;
     if (!message.reference?.messageId) return;
 
+    // Mask Protection: Ignores replies with a mask
+    if (message.content.includes(':mask:') || message.content.includes('😷')) return;
+
     // Resolve the user being replied to
     const repliedUser = message.mentions.repliedUser;
     if (!repliedUser) return;
