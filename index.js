@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { Client, GatewayIntentBits, Partials, Events } = require('discord.js');
+const { Client, GatewayIntentBits, Partials, Events, PermissionsBitField } = require('discord.js');
 
 const TOKEN = process.env.DISCORD_TOKEN;
 const VIRUS_ROLE_ID = process.env.VIRUS_ROLE_ID;
